@@ -13,17 +13,17 @@ $ ./gradlew bootRun
 $ docker pull openjdk:17-jdk-slim
 
 ### 도커 컨테이너용 이미지 생성
-$ docker build -t Chanyong-Park/webflux:0.1.0 -f Dockerfile .       (별도 Dockerfile 참조)
+$ docker build -t Chanyong-Park/webflux:0.0.2 -f Dockerfile .       (별도 Dockerfile 참조)
 
 ### 도커 이미지 삭제
-$ docker rmi Chanyong-Park/webflux:0.1.0
+$ docker rmi Chanyong-Park/webflux:0.0.2
 
 ## docker를 이용한 컨테이너 생성
 ### 방법1
-$ docker run -d -e WHICH_PROFILE=develop -p 8080:8081 --name webflux Chanyong-Park/webflux:0.1.0
+$ docker run -d -e WHICH_PROFILE=develop -p 8080:8081 --name webflux Chanyong-Park/webflux:0.0.2
 
 ### 방법2
-$ docker create -e WHICH_PROFILE=develop -p 8080:8081 --name webflux Chanyong-Park/webflux:0.1.0
+$ docker create -e WHICH_PROFILE=develop -p 8080:8081 --name webflux Chanyong-Park/webflux:0.0.2
 
 $ docker start webflux
 
